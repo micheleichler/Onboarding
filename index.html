@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Marketing-Diagnose · Standortbestimmung</title>
+<title>Onboarding-Marketing-Diagnose</title>
 <script>/* jsPDF */
 /** @license
  *
@@ -540,7 +540,7 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
 <body>
 <main class="page">
   <div class="top">
-    <div class="brand"><b>Marketing-Diagnose</b><small>Unabhängige Standortbestimmung statt Agenturversprechen</small></div>
+    <div class="brand"><b>Marketing-Diagnose</b><small>Unabhängige Diagnose statt Agenturversprechen</small></div>
     <div class="eyebrow" id="phaseTag">Onboarding</div>
   </div>
   <div class="progress-wrap">
@@ -549,7 +549,7 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
   </div>
   <div class="card"><div id="screen"></div></div>
   <div class="micro-note">
-    Deine Angaben bleiben in diesem Browser. Am Ende erzeugst du daraus eine PDF-Standortbestimmung zum Speichern. Es wird nichts automatisch verschickt.
+    Deine Angaben bleiben in diesem Browser. Am Ende erzeugst du daraus eine PDF-Diagnose zum Speichern. Es wird nichts automatisch verschickt.
   </div>
 </main>
 <script>
@@ -805,7 +805,7 @@ function navHTML(){
   const skip=s.optional?`<button type="button" class="btn btn-skip" id="skipBtn">Modul überspringen →</button>`:'';
   return `<div class="nav">
     <button type="button" class="btn btn-ghost" id="backBtn" ${current<=1?'disabled':''}>← Zurück</button>
-    <div style="display:flex;gap:10px;flex-wrap:wrap;">${skip}<button type="button" class="btn btn-primary" id="nextBtn">${lastInput?'Standortbestimmung anzeigen →':'Weiter →'}</button></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">${skip}<button type="button" class="btn btn-primary" id="nextBtn">${lastInput?'Diagnose anzeigen →':'Weiter →'}</button></div>
   </div>`;
 }
 
@@ -824,7 +824,7 @@ function renderIntro(){
   screen.innerHTML=`<div class="card-inner anim">
     <p class="kicker">Onboarding · Marketing-Diagnose</p>
     <h1>Bringen wir dein Marketing aus der <em>Blackbox</em>.</h1>
-    <p class="lead">Wir gehen gemeinsam dein Marketing entlang von sieben Hebeln durch, Schritt für Schritt. Am Ende bekommst du sofort eine erste Standortbestimmung als PDF: wo du stark bist, wo es klemmt, und wo der größte Hebel liegt. Das vollständige Gutachten erstelle ich danach für dich persönlich.</p>
+    <p class="lead">Wir gehen gemeinsam dein Marketing entlang von sieben Hebeln durch, Schritt für Schritt. Am Ende bekommst du sofort eine erste Diagnose als PDF: wo du stark bist, wo es klemmt, und wo der größte Hebel liegt. Das vollständige Gutachten erstelle ich danach für dich persönlich.</p>
     <div class="pillars">
       <div class="pillar"><b>Angebot</b><span>Was du verkaufst & was es verspricht</span></div>
       <div class="pillar"><b>Positionierung</b><span>Warum dich, nicht andere</span></div>
@@ -952,7 +952,7 @@ function renderResult(){
   summary+=`Mal ehrlich: Das ist keine schlechte Nachricht, sondern eine klare Marschrichtung.`;
 
   let html=`<div class="result-hero anim">
-    <p class="kicker">Erste Standortbestimmung</p>
+    <p class="kicker">Onboarding-Marketing-Diagnose</p>
     <div class="fit-row"><strong>${name?esc(name)+', das ist dein Stand.':'Das ist dein Stand.'}</strong><span class="pill ${fit.pill}">${fit.level}</span></div>
     <p>${summary}</p>
     <div class="maturity"><div class="mscore">${avg.toFixed(1)}<span style="font-size:15px;color:var(--muted)">/4</span></div><div class="mlabel"><b>Geschäftsmodell-Reife: ${mat.label}</b><span>${capped?'Begrenzt durch dein Fundament (Angebot/Positionierung). Dort liegt der Schlüssel.':mat.sub+' · Schnitt über '+scored.length+' bewertete Hebel'}</span></div></div>
@@ -980,8 +980,8 @@ function renderResult(){
       <div class="emp"><b>Erste Richtung</b>${a[1]}</div></div>`;
   });
 
-  html+=`<div class="nextstep"><b>Wie es weitergeht</b><p>Gute Entscheidung, dass du das angehst: schon diese erste Standortbestimmung zeigt, wo es etwas zu holen gibt. Sie ist bewusst kompakt: dein Überblick für den Moment. Im vollständigen Gutachten gehe ich tiefer: ich verbinde deine Hebel miteinander, decke auf, was zwischen ihnen passiert, und mache daraus einen konkreten Umsetzungsfahrplan. Genau dort wird aus dem Überblick echte Klarheit. Lade dir die Standortbestimmung als PDF, den Rest gehen wir gemeinsam an.</p></div>
-    <div class="dl-row"><button class="btn btn-primary" id="dlPdf">Standortbestimmung als PDF sichern ↓</button></div>
+  html+=`<div class="nextstep"><b>Wie es weitergeht</b><p>Gute Entscheidung, dass du das angehst: schon diese erste Diagnose zeigt, wo es etwas zu holen gibt. Sie ist bewusst kompakt: dein Überblick für den Moment. Im vollständigen Gutachten gehe ich tiefer: ich verbinde deine Hebel miteinander, decke auf, was zwischen ihnen passiert, und mache daraus einen konkreten Umsetzungsfahrplan. Genau dort wird aus dem Überblick echte Klarheit. Lade dir die Diagnose als PDF, den Rest gehen wir gemeinsam an.</p></div>
+    <div class="dl-row"><button class="btn btn-primary" id="dlPdf">Diagnose als PDF sichern ↓</button></div>
     <div class="dl-row" style="margin-top:10px;"><button class="btn btn-internal" id="dlInternal">🔒 Internes Gutachter-Dokument (nur für Michel) ↓</button></div>
     <div class="nav"><button type="button" class="btn btn-ghost" id="backBtn">← Etwas ändern</button><span></span></div>
   </div>`;
@@ -991,9 +991,9 @@ function renderResult(){
   document.getElementById('backBtn').onclick=()=>{current--;render();};
 }
 
-/* ===== PDF (customer-facing "Erste Standortbestimmung") ===== */
+/* ===== PDF (customer-facing "Onboarding-Marketing-Diagnose") ===== */
 function pdfReady(){if(window.jspdf&&window.jspdf.jsPDF)return true;alert('Die PDF-Funktion konnte nicht geladen werden. Bitte Seite neu laden.');return false;}
-function fileSafe(s){return (s||'Standortbestimmung').replace(/[^a-z0-9äöü]+/gi,'_').replace(/^_|_$/g,'').slice(0,40);}
+function fileSafe(s){return (s||'Onboarding-Marketing-Diagnose').replace(/[^a-z0-9äöü]+/gi,'_').replace(/^_|_$/g,'').slice(0,40);}
 
 function makePDF(fit,results,avg,mat,biggest,summary,capped){
   if(!pdfReady())return;
@@ -1002,11 +1002,11 @@ function makePDF(fit,results,avg,mat,biggest,summary,capped){
   const cMap={red:[232,68,46],orange:[240,150,46],green:[78,203,130],grey:[150,160,170]};
   // cover
   doc.setFillColor(25,70,102);doc.rect(0,0,210,297,'F');
-  doc.setTextColor(219,192,120);doc.setFont('helvetica','bold');doc.setFontSize(12);
-  doc.text('MARKETING-DIAGNOSE',105,95,{align:'center'});
-  doc.setDrawColor(219,192,120);doc.setLineWidth(.4);doc.line(72,101,138,101);
-  doc.setTextColor(245,238,220);doc.setFontSize(26);
-  doc.text('Erste Standortbestimmung',105,118,{align:'center'});
+  doc.setTextColor(219,192,120);doc.setFont('helvetica','bold');doc.setFontSize(11);
+  doc.text('DEINE DIAGNOSE',105,95,{align:'center'});
+  doc.setDrawColor(219,192,120);doc.setLineWidth(.4);doc.line(85,101,125,101);
+  doc.setTextColor(245,238,220);doc.setFontSize(20);
+  doc.text('Onboarding-Marketing-Diagnose',105,118,{align:'center'});
   let coverY=133;
   if(state.company){
     doc.setFont('helvetica','normal');doc.setFontSize(13);doc.setTextColor(220,210,185);
@@ -1076,7 +1076,7 @@ function makePDF(fit,results,avg,mat,biggest,summary,capped){
   doc.setFillColor(247,242,228);doc.roundedRect(L,y,W,40,3,3,'F');
   doc.setTextColor(150,120,40);doc.setFont('helvetica','bold');doc.setFontSize(9);doc.text('WIE ES WEITERGEHT',L+5,y+8);
   doc.setTextColor(45,55,65);doc.setFont('helvetica','normal');doc.setFontSize(10);
-  doc.text(doc.splitTextToSize('Gute Entscheidung, dass du das angehst. Diese Standortbestimmung ist dein erster Überblick, bewusst kompakt. Im vollständigen Gutachten verbinde ich deine Hebel miteinander, decke auf was zwischen ihnen passiert, und mache daraus einen konkreten Umsetzungsfahrplan. Genau dort wird aus dem Überblick echte Klarheit.',W-10),L+5,y+15);
+  doc.text(doc.splitTextToSize('Gute Entscheidung, dass du das angehst. Diese Diagnose ist dein erster Überblick, bewusst kompakt. Im vollständigen Gutachten verbinde ich deine Hebel miteinander, decke auf was zwischen ihnen passiert, und mache daraus einen konkreten Umsetzungsfahrplan. Genau dort wird aus dem Überblick echte Klarheit.',W-10),L+5,y+15);
   doc.setFont('helvetica','bold');doc.setTextColor(18,48,74);doc.setFontSize(10);
   doc.text('Ich liefere keine Versprechen, sondern Struktur und Klarheit.',L+5,y+35);
 
@@ -1084,11 +1084,11 @@ function makePDF(fit,results,avg,mat,biggest,summary,capped){
   const n=doc.getNumberOfPages();
   for(let i=2;i<=n;i++){doc.setPage(i);doc.setDrawColor(225,222,212);doc.setLineWidth(.2);doc.line(L,287,R,287);
     doc.setTextColor(150,160,170);doc.setFont('helvetica','normal');doc.setFontSize(8);
-    doc.text('Marketing-Diagnose · Erste Standortbestimmung',L,291);
+    doc.text('Onboarding-Marketing-Diagnose',L,291);
     doc.text('Seite '+(i-1),R,291,{align:'right'});}
-  doc.save('Standortbestimmung_'+fileSafe(state.company)+'.pdf');
+  doc.save('Onboarding-Marketing-Diagnose_'+fileSafe(state.company)+'.pdf');
 }
-function hdr(doc){doc.setFillColor(25,70,102);doc.rect(0,0,210,26,'F');doc.setTextColor(219,192,120);doc.setFont('helvetica','bold');doc.setFontSize(14);doc.text('Marketing-Diagnose',15,13);doc.setTextColor(220,210,185);doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.text('Erste Standortbestimmung',15,20);return 38;}
+function hdr(doc){doc.setFillColor(25,70,102);doc.rect(0,0,210,26,'F');doc.setTextColor(219,192,120);doc.setFont('helvetica','bold');doc.setFontSize(14);doc.text('Marketing-Diagnose',15,13);doc.setTextColor(220,210,185);doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.text('Onboarding-Marketing-Diagnose',15,20);return 38;}
 
 /* ===== INTERNAL Gutachter-PDF: readable answers + LLM input block ===== */
 function answerText(f){
